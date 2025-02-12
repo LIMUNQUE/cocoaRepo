@@ -218,15 +218,15 @@ export default function Home() {
 
         {/* CTA Section */}
         <section id="contact" className="py-12 text-center scroll-mt-20">
-          <h2 className="text-3xl font-semibold mb-4 text-slate-800">¿Listo para revolucionar tu cacaotera?</h2>
+          <h2 className="text-3xl font-semibold mb-4 text-slate-800">
+            ¿Listo para revolucionar tu cacaotera?
+          </h2>
           <p className="text-xl text-slate-600 mb-6">
             Contáctanos hoy para descubrir cómo CacaoBot puede transformar tu producción de cacao.
           </p>
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700">
-              Contactar Ahora
-            </Button>
-          </motion.div>
+          <p className="text-lg font-medium text-slate-700">
+            Contacte con nosotros: <a href="mailto:josalcob@espol.edu.ec" className="text-blue-600 hover:underline">josalcob@espol.edu.ec</a>
+          </p>
         </section>
       </main>
 
