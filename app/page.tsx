@@ -70,7 +70,7 @@ export default function Home() {
           >
             <Image
               src="https://i.ibb.co/0RRY5gSb/file-0000000015d851f7a28903446989199d-conversation-id-67e82eff-c254-800b-b4c6-cb827ea42e37-message-i.png"
-              alt="CacaoBot Robot"
+              alt="Cacao Health Detector"
               width={500}
               height={500}
               className="rounded-lg shadow-lg"
@@ -221,7 +221,7 @@ export default function Home() {
             Ready to revolutionize your cocoa plantation?
           </h2>
           <p className="text-xl text-slate-600 mb-6">
-            Contact us today to discover how CacaoBot can transform your cocoa production.
+            Contact us today to discover how Cacao Helath Detector can transform your cocoa production.
           </p>
           <p className="text-lg font-medium text-slate-700">
             Get in touch: <a href="mailto:josalcob@espol.edu.ec" className="text-blue-600 hover:underline">josalcob@espol.edu.ec</a>
@@ -231,7 +231,7 @@ export default function Home() {
 
       <footer className="bg-slate-800 text-white py-6">
         <div className="container mx-auto text-center">
-          <p>&copy; 2025 CacaoBot. All rights reserved.</p>
+          <p>&copy; 2025 Cacao Health Detector. All rights reserved.</p>
         </div>
       </footer>
     </div>
