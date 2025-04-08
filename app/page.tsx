@@ -39,7 +39,7 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl text-center text-slate-600 mt-2"
         >
-          Innovación en Monitoreo de Cacaoteras
+          Innovation in Cocoa Plantation Monitoring
         </motion.p>
       </header>
 
@@ -52,14 +52,13 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="md:w-1/2"
           >
-            <h2 className="text-4xl font-semibold mb-4 text-slate-800">Revolucionando el Cuidado del Cacao</h2>
+            <h2 className="text-4xl font-semibold mb-4 text-slate-800">Revolutionizing Cocoa Care</h2>
             <p className="text-xl text-slate-600 mb-6">
-              Nuestro robot diferencial equipado con tecnología de punta recorre cacaoteras, identificando y localizando
-              cacaos no sanos en tiempo real.
+              Our differential robot equipped with cutting-edge technology traverses cocoa plantations, identifying and locating unhealthy cacao in real time.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700">
-                Descubre Más
+                Learn More
               </Button>
             </motion.div>
           </motion.div>
@@ -70,8 +69,8 @@ export default function Home() {
             className="md:w-1/2 mt-6 md:mt-0"
           >
             <Image
-              src="https://i.ibb.co/WWBBBZDd/logo.png"
-              alt="Robot CacaoBot"
+              src="https://i.ibb.co/0RRY5gSb/file-0000000015d851f7a28903446989199d-conversation-id-67e82eff-c254-800b-b4c6-cb827ea42e37-message-i.png"
+              alt="CacaoBot Robot"
               width={500}
               height={500}
               className="rounded-lg shadow-lg"
@@ -91,24 +90,24 @@ export default function Home() {
         {/* Features Section */}
         <section id="features" className="py-12 scroll-mt-20" ref={targetRef}>
           <motion.h2 style={{ opacity, scale }} className="text-3xl font-semibold mb-8 text-center text-slate-800">
-            Características Avanzadas
+            Advanced Features
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 icon: <Camera className="w-12 h-12 text-blue-500" />,
-                title: "Cámara RGB",
-                description: "Captura imágenes de alta resolución para un análisis preciso.",
+                title: "RGB Camera",
+                description: "Captures high-resolution images for precise analysis.",
               },
               {
                 icon: <MapPin className="w-12 h-12 text-blue-500" />,
-                title: "Módulo GPS",
-                description: "Registra la ubicación exacta de cada cacao no sano.",
+                title: "GPS Module",
+                description: "Records the exact location of each unhealthy cacao.",
               },
               {
                 icon: <Cpu className="w-12 h-12 text-blue-500" />,
-                title: "Sensor LIDAR",
-                description: "Mapea el entorno para una navegación eficiente.",
+                title: "LIDAR Sensor",
+                description: "Maps the environment for efficient navigation.",
               },
             ].map((feature, index) => (
               <motion.div
@@ -131,22 +130,22 @@ export default function Home() {
 
         {/* Process Section */}
         <section id="process" className="py-12 bg-white/50 rounded-lg shadow-inner scroll-mt-20">
-          <h2 className="text-3xl font-semibold mb-8 text-center text-slate-800">Proceso de Detección y Registro</h2>
+          <h2 className="text-3xl font-semibold mb-8 text-center text-slate-800">Detection and Logging Process</h2>
           <Tabs defaultValue="scan" className="w-full">
             <TabsList className="grid w-full grid-cols-4">
-              <TabsTrigger value="scan">Escaneo</TabsTrigger>
-              <TabsTrigger value="detect">Detección</TabsTrigger>
-              <TabsTrigger value="geolocate">Geolocalización</TabsTrigger>
-              <TabsTrigger value="report">Informe</TabsTrigger>
+              <TabsTrigger value="scan">Scanning</TabsTrigger>
+              <TabsTrigger value="detect">Detection</TabsTrigger>
+              <TabsTrigger value="geolocate">Geolocation</TabsTrigger>
+              <TabsTrigger value="report">Report</TabsTrigger>
             </TabsList>
             <TabsContent value="scan">
               <Card>
                 <CardContent className="flex items-center p-6">
                   <Leaf className="w-12 h-12 text-emerald-500 mr-4" />
                   <div>
-                    <h3 className="text-xl font-semibold text-slate-800">Escaneo</h3>
+                    <h3 className="text-xl font-semibold text-slate-800">Scanning</h3>
                     <p className="text-slate-600">
-                      El robot recorre la cacaotera escaneando los árboles con precisión.
+                      The robot scans the cocoa plantation trees with precision.
                     </p>
                   </div>
                 </CardContent>
@@ -157,8 +156,8 @@ export default function Home() {
                 <CardContent className="flex items-center p-6">
                   <AlertTriangle className="w-12 h-12 text-yellow-500 mr-4" />
                   <div>
-                    <h3 className="text-xl font-semibold text-slate-800">Detección</h3>
-                    <p className="text-slate-600">YOLO identifica cacaos no sanos en tiempo real con alta precisión.</p>
+                    <h3 className="text-xl font-semibold text-slate-800">Detection</h3>
+                    <p className="text-slate-600">YOLO identifies unhealthy cacao in real time with high accuracy.</p>
                   </div>
                 </CardContent>
               </Card>
@@ -168,8 +167,8 @@ export default function Home() {
                 <CardContent className="flex items-center p-6">
                   <MapPin className="w-12 h-12 text-red-500 mr-4" />
                   <div>
-                    <h3 className="text-xl font-semibold text-slate-800">Geolocalización</h3>
-                    <p className="text-slate-600">Se registra la ubicación exacta de cada cacao no sano detectado.</p>
+                    <h3 className="text-xl font-semibold text-slate-800">Geolocation</h3>
+                    <p className="text-slate-600">The exact location of each unhealthy cacao is recorded.</p>
                   </div>
                 </CardContent>
               </Card>
@@ -179,9 +178,9 @@ export default function Home() {
                 <CardContent className="flex items-center p-6">
                   <FileSpreadsheet className="w-12 h-12 text-blue-500 mr-4" />
                   <div>
-                    <h3 className="text-xl font-semibold text-slate-800">Informe</h3>
+                    <h3 className="text-xl font-semibold text-slate-800">Report</h3>
                     <p className="text-slate-600">
-                      Se genera un informe detallado al finalizar el recorrido para análisis.
+                      A detailed report is generated at the end of the route for analysis.
                     </p>
                   </div>
                 </CardContent>
@@ -192,13 +191,13 @@ export default function Home() {
 
         {/* Benefits Section */}
         <section id="benefits" className="py-12 scroll-mt-20">
-          <h2 className="text-3xl font-semibold mb-8 text-center text-slate-800">Beneficios del Proyecto</h2>
+          <h2 className="text-3xl font-semibold mb-8 text-center text-slate-800">Project Benefits</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Detección temprana de enfermedades en el cacao",
-              "Optimización de recursos en el cuidado de las plantaciones",
-              "Aumento de la productividad y calidad del cacao",
-              "Reducción del uso de pesticidas mediante intervenciones focalizadas",
+              "Early detection of cacao diseases",
+              "Resource optimization for plantation care",
+              "Increased productivity and cocoa quality",
+              "Reduced pesticide use through targeted intervention",
             ].map((benefit, index) => (
               <motion.div
                 key={index}
@@ -219,23 +218,22 @@ export default function Home() {
         {/* CTA Section */}
         <section id="contact" className="py-12 text-center scroll-mt-20">
           <h2 className="text-3xl font-semibold mb-4 text-slate-800">
-            ¿Listo para revolucionar tu cacaotera?
+            Ready to revolutionize your cocoa plantation?
           </h2>
           <p className="text-xl text-slate-600 mb-6">
-            Contáctanos hoy para descubrir cómo CacaoBot puede transformar tu producción de cacao.
+            Contact us today to discover how CacaoBot can transform your cocoa production.
           </p>
           <p className="text-lg font-medium text-slate-700">
-            Contacte con nosotros: <a href="mailto:josalcob@espol.edu.ec" className="text-blue-600 hover:underline">josalcob@espol.edu.ec</a>
+            Get in touch: <a href="mailto:josalcob@espol.edu.ec" className="text-blue-600 hover:underline">josalcob@espol.edu.ec</a>
           </p>
         </section>
       </main>
 
       <footer className="bg-slate-800 text-white py-6">
         <div className="container mx-auto text-center">
-          <p>&copy; 2025 CacaoBot. Todos los derechos reservados.</p>
+          <p>&copy; 2025 CacaoBot. All rights reserved.</p>
         </div>
       </footer>
     </div>
   )
 }
-
