@@ -31,7 +31,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="text-5xl font-bold text-center text-slate-800"
         >
-          CacaoBot
+          Cacao Health Detector
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: -20 }}

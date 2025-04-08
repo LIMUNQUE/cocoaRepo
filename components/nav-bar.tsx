@@ -22,20 +22,20 @@ export function NavBar() {
           <span className="text-xl font-bold text-slate-800">CacaoBot</span>
           <div className="hidden md:flex space-x-4">
             <Button variant="ghost" onClick={() => scrollToSection("features")}>
-              Características
+            Features
             </Button>
             <Button variant="ghost" onClick={() => scrollToSection("process")}>
-              Proceso
+            Processes
             </Button>
             <Button variant="ghost" onClick={() => scrollToSection("benefits")}>
-              Beneficios
+            Benefits
             </Button>
             <Button
               variant="default"
               onClick={() => scrollToSection("contact")}
               className="bg-blue-600 text-white hover:bg-blue-700"
             >
-              Contactar
+              Contact
             </Button>
           </div>
         </div>
