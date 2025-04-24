@@ -7,8 +7,12 @@ export const metadata: Metadata = {
   title: 'Cacao Health Detector',
   description: 'Innovation in Cocoa Plantation Monitoring',
   keywords: 'cacao, health, detector, plantation, monitoring, agriculture',
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#ffffff',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#ffffff'
 }
 
 export default function RootLayout({
