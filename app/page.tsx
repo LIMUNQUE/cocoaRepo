@@ -24,12 +24,12 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
       <AnimatedBackground />
       <NavBar />
-      <header className="container mx-auto py-20 mt-16">
+      <header className="container mx-auto py-24 mt-20">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl font-bold text-center text-slate-800"
+          className="text-6xl font-bold text-center text-slate-900 md:text-7xl"
         >
           Cacao Health Detector
         </motion.h1>
@@ -37,7 +37,7 @@ export default function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl text-center text-slate-600 mt-2"
+          className="text-2xl text-center text-slate-700 mt-4 md:text-3xl"
         >
           Innovation in Cocoa Plantation Monitoring
         </motion.p>

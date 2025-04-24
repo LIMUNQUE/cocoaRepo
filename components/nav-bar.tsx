@@ -2,12 +2,23 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export function NavBar() {
+  const pathname = usePathname()
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  const handleNavigation = (id: string) => {
+    if (pathname === "/blog") {
+      window.location.href = "/" // Redirect to home page
+    } else {
+      scrollToSection(id)
     }
   }
 
@@ -19,20 +30,42 @@ export function NavBar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <span className="text-xl font-bold text-slate-800">CacaoBot</span>
+          <motion.span
+            className="text-xl font-bold text-slate-800 cursor-pointer"
+            onClick={() => {
+              if (pathname === "/blog") {
+                window.location.href = "/" // Redirect to home page
+              }
+              else{
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                })
+              }
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Cacao Health Detector
+          </motion.span>
           <div className="hidden md:flex space-x-4">
-            <Button variant="ghost" onClick={() => scrollToSection("features")}>
-            Features
+            <Button variant="ghost" onClick={() => handleNavigation("features")}>
+              Features
             </Button>
-            <Button variant="ghost" onClick={() => scrollToSection("process")}>
-            Processes
+            <Button variant="ghost" onClick={() => handleNavigation("process")}>
+              Processes
             </Button>
-            <Button variant="ghost" onClick={() => scrollToSection("benefits")}>
-            Benefits
+            <Button variant="ghost" onClick={() => handleNavigation("benefits")}>
+              Benefits
             </Button>
+            <Link href="/blog">
+              <Button variant="ghost">
+                Blog
+              </Button>
+            </Link>
             <Button
               variant="default"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => handleNavigation("contact")}
               className="bg-blue-600 text-white hover:bg-blue-700"
             >
               Contact
@@ -43,4 +76,3 @@ export function NavBar() {
     </motion.nav>
   )
 }
-

@@ -1,10 +1,14 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { NavBar } from '@/components/nav-bar'
+import { AnimatedBackground } from '@/components/animated-background'
 
 export const metadata: Metadata = {
   title: 'Cacao Health Detector',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  description: 'Innovation in Cocoa Plantation Monitoring',
+  keywords: 'cacao, health, detector, plantation, monitoring, agriculture',
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#ffffff',
 }
 
 export default function RootLayout({
@@ -13,8 +17,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body className="antialiased">
+        <NavBar />
+        <AnimatedBackground />
+        <main className="min-h-screen">
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
