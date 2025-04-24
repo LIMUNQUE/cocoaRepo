@@ -58,18 +58,19 @@ export function NavBar() {
             <Button variant="ghost" onClick={() => handleNavigation("benefits")}>
               Benefits
             </Button>
-            <Link href="/blog">
-              <Button variant="ghost">
-                Blog
+            
+              <Button variant="ghost" onClick={() => handleNavigation("contact")}>
+                Contact
               </Button>
-            </Link>
+            
+            <Link href="/blog">
             <Button
-              variant="default"
-              onClick={() => handleNavigation("contact")}
+              variant="ghost"
               className="bg-blue-600 text-white hover:bg-blue-700"
             >
-              Contact
+              Blog
             </Button>
+            </Link>
           </div>
         </div>
       </div>

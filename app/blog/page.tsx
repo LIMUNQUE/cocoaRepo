@@ -3,44 +3,36 @@
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { format } from "date-fns"
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 
-interface BlogPost {
-  id: number
-  title: string
-  date: Date
-  excerpt: string
-  imageUrl: string
-  tags: string[]
+interface LinkedInPost {
+  id: string;
+  iframeSrc: string;
+  date: Date;
+  title: string;
+  description: string;
+  tags: string[];
 }
-
-const blogPosts: BlogPost[] = [
+const linkedInPosts: LinkedInPost[] = [
   {
-    id: 1,
+    id: "1",
+    iframeSrc: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7318292123609436161?collapsed=1",
+    date: new Date("2025-04-24"),
     title: "Avances en la Detección de Enfermedades del Cacao",
-    date: new Date("2025-04-15"),
-    excerpt: "Nuestro robot ha logrado una precisión del 95% en la detección temprana de enfermedades del cacao usando visión por computadora.",
-    imageUrl: "/images/blog/avances-deteccion.jpg",
+    description: "Nuestro robot ha logrado una precisión del 95% en la detección temprana de enfermedades del cacao usando visión por computadora.",
     tags: ["Tecnología", "Investigación", "Avances"]
   },
   {
-    id: 2,
-    title: "Implementación del Sistema de Navegación Autónoma",
-    date: new Date("2025-04-10"),
-    excerpt: "Desarrollo exitoso del sistema de navegación autónoma para el robot Cacao Health Detector.",
-    imageUrl: "/images/blog/navegacion-autonoma.jpg",
-    tags: ["Robótica", "Navegación", "Desarrollo"]
+    id: "2",
+    iframeSrc: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7307989182985990147?collapsed=1",
+    date: new Date("2025-03-22"),
+    title: "Diseño mécanico del robot",
+    description: "Diseñamos nuevas uniones estructurales que facilitan el montaje y mantenimiento del sistema, permitiendo un acceso más sencillo a los componentes internos.",
+    tags: ["Tecnología", "Investigación", "Avances"]
   },
-  {
-    id: 3,
-    title: "Primeras Pruebas en Campo",
-    date: new Date("2025-04-05"),
-    excerpt: "Resultados prometedores de las primeras pruebas del robot en plantaciones de cacao.",
-    imageUrl: "/images/blog/pruebas-campo.jpg",
-    tags: ["Pruebas", "Campo", "Resultados"]
-  }
+
+  // Add more LinkedIn posts here
 ]
 
 export default function Blog() {
@@ -66,7 +58,7 @@ export default function Blog() {
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {blogPosts.map((post) => (
+        {linkedInPosts.map((post) => (
           <motion.div
             key={post.id}
             initial={{ opacity: 0, y: 20 }}
@@ -76,12 +68,15 @@ export default function Blog() {
             className="group"
           >
             <Card className="h-full hover:shadow-lg transition-shadow">
-              <CardHeader className="relative h-48">
-                <Image
-                  src={post.imageUrl}
-                  alt={post.title}
-                  fill
-                  className="object-cover rounded-t-lg"
+              <CardHeader className="relative">
+                <iframe
+                  src={post.iframeSrc}
+                  height="543"
+                  width="100%"
+                  frameBorder="0"
+                  allowFullScreen
+                  title="Publicación de LinkedIn"
+                  className="rounded-t-lg"
                 />
               </CardHeader>
               <CardContent>
@@ -89,7 +84,7 @@ export default function Blog() {
                   {post.title}
                 </CardTitle>
                 <p className="text-slate-600 mb-4 line-clamp-3">
-                  {post.excerpt}
+                  {post.description}
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-slate-500">
