@@ -60,7 +60,7 @@ export function NavBar() {
             </Button>
             
               <Button variant="ghost" onClick={() => handleNavigation("contact")}>
-                Contact
+                Contacts
               </Button>
             
             <Link href="/blog">
